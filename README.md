@@ -39,8 +39,10 @@ dockerコンテナを起動します
 	(...snip)
 
 
-dockerコンテナ上のinterfade情報を確認します
+dockerコンテナ上のinterface情報を確認します
 
+	$ docker exec -it BGP1 bash
+	root@BGP1:~# cd simpleRouter/rest-client
 	root@BGP1:~/simpleRouter/rest-client# ./get_interface.sh 
 	======================================================================
 	get_interface
@@ -63,8 +65,6 @@ dockerコンテナ上のinterfade情報を確認します
 
 しばらくしてから、dockerコンテナ上でAPRテーブルを確認します
 
-	$ docker exec -it BGP1 bash
-	root@BGP1:~# cd simpleRouter/rest-client
 	root@BGP1:~/simpleRouter/rest-client# ./get_arp.sh 
 	======================================================================
 	get_arp
